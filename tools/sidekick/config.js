@@ -15,8 +15,10 @@
           button: {
             text: 'Directory',
             action: async (_, s) => {
-                const dirHandle = await window.showDirectoryPicker();
-                console.log(dirHandle);
+                const dirHandle = await window.showDirectoryPicker(); 
+                const file = await dirHandle.getFileHandle();
+                const content = await file.text();
+                console.log(content);
             },
           },
         },
