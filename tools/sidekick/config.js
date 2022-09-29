@@ -16,9 +16,9 @@
             text: 'Directory',
             action: async (_, s) => {
                 const dirHandle = await window.showDirectoryPicker(); 
-                const file = await dirHandle.getFileHandle();
-                const content = await file.text();
-                console.log(content);
+                for await (const entry of dirHandle.values()) {
+                    console.log(entry.kind, entry.name);
+                }
             },
           },
         },
