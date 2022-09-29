@@ -1,6 +1,5 @@
 // This file contains the project-specific configuration for the sidekick.
 (() => {
-    alert('dsds');
     window.hlx.initSidekick({
       hlx3: true,
       libraries: [
@@ -14,9 +13,9 @@
           id: 'tools',
           condition: (s) => s.isEditor(),
           button: {
-            text: 'Tools',
+            text: 'Directory',
             action: (_, s) => {
-              alert(1111);
+                window.showOpenFilePicker();
             },
           },
         },
