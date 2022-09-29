@@ -1,5 +1,6 @@
 // This file contains the project-specific configuration for the sidekick.
 (() => {
+    alert('dsds');
     window.hlx.initSidekick({
       hlx3: true,
       libraries: [
