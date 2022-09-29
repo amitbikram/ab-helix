@@ -20,7 +20,7 @@
                         {
                         description: 'Directory',
                         accept: {
-                            'directory': []
+                            'image/*': ['.png', '.gif', '.jpeg', '.jpg']
                         }
                         },
                     ],
