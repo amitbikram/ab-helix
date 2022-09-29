@@ -15,7 +15,19 @@
           button: {
             text: 'Directory',
             action: (_, s) => {
-                window.showOpenFilePicker();
+                const pickerOpts = {
+                    types: [
+                        {
+                        description: 'Directory',
+                        accept: {
+                            'directory': []
+                        }
+                        },
+                    ],
+                    excludeAcceptAllOption: true,
+                    multiple: false
+                };
+                window.showOpenFilePicker(pickerOpts);
             },
           },
         },
