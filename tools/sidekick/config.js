@@ -14,20 +14,9 @@
           condition: (s) => s.isEditor(),
           button: {
             text: 'Directory',
-            action: (_, s) => {
-                const pickerOpts = {
-                    types: [
-                        {
-                        description: 'Directory',
-                        accept: {
-                            'image/*': ['.png', '.gif', '.jpeg', '.jpg']
-                        }
-                        },
-                    ],
-                    excludeAcceptAllOption: true,
-                    multiple: false
-                };
-                window.showOpenFilePicker(pickerOpts);
+            action: async (_, s) => {
+                const dirHandle = await window.showDirectoryPicker();
+                console.log(dirHandle);
             },
           },
         },
